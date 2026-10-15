@@ -7,14 +7,32 @@
 <body>
     <h1>Rohirrim Tour Booking Confirmation</h1>
 <?php
-    // Text fields: check each value was submitted before using it
-    if (isset($_POST["firstname"])) { $firstname = $_POST["firstname"]; } else { $firstname = ""; }
-    if (isset($_POST["lastname"]))  { $lastname  = $_POST["lastname"];  } else { $lastname  = ""; }
-    if (isset($_POST["age"]))       { $age       = $_POST["age"];       } else { $age       = ""; }
-    if (isset($_POST["species"]))   { $species   = $_POST["species"];   } else { $species   = ""; }
-    if (isset($_POST["food"]))      { $food      = $_POST["food"];      } else { $food      = ""; }
-    if (isset($_POST["bookday"]))   { $bookday   = $_POST["bookday"];   } else { $bookday   = ""; }
-    if (isset($_POST["partysize"])) { $partysize = $_POST["partysize"]; } else { $partysize = ""; }
+    
+    if (isset($_POST["firstname"])) 
+        { $firstname = $_POST["firstname"]; 
+    } else { 
+        $firstname = ""; 
+    }
+    if (isset($_POST["lastname"])) { 
+        $lastname  = $_POST["lastname"]; 
+    } else { 
+        $lastname  = ""; 
+    }
+    if (isset($_POST["age"])){ 
+        $age= $_POST["age"];
+    } else { 
+        $age= ""; 
+    }
+    if (isset($_POST["food"])){ 
+        $food= $_POST["food"];
+    } else { 
+        $food= ""; 
+    }
+    if (isset($_POST["partysize"])) { 
+        $partysize = $_POST["partysize"]; 
+    } else { 
+        $partysize = ""; 
+    }
 
     $species = "";
     if (isset($_POST["species"])) {
